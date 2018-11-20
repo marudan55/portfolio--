@@ -1,3 +1,6 @@
-h1 {
-  color: red;
+
+/*変数宣言*/
+:root {
+  --main-color: #F06292;
+  --accent-color: #E91E63;
 }
