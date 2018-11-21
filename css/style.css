@@ -9,13 +9,27 @@
 }
 
 /*初期設定*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #wrap {
-  overflow: hidden;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   max-width: 1300px;
 }
 
+h3 {
+  border-bottom: dotted 2px gray;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
 /*ヘッダー*/
 header .title {
 
@@ -35,28 +49,32 @@ header p {
   border-radius: 10px;
 }
 
-header p span {
+header p span.call {
   color: var(--main-color);
   font-size: 25px;
   font-weight: bold;
 }
 
-header p span:before {
+header p span.call:before {
   font-family: "Font Awesome 5 Free";
   content: '\f095';
   margin-right: 3px;
+  color: var(--main-color);
 }
 
-header .main-image {
-  display: block;
+header p span.day {
+  font-size: 14px;
+}
+
+/*トップ画像*/
+header .top-image img {
+  box-sizing: border-box;
   width: 100%;
-  height: 500px;
-  background-color: var(--main-color);
+  height: auto;
+  box-shadow: var(--main-shadow);
 }
 
 /*ヘッダー：メニューボタン*/
-
-
 #menu-btn {
   display: block;
   width: 45px;
@@ -71,11 +89,11 @@ header .main-image {
 }
 
 
-#menu-btn span {
+#menu-btn span:not(:last-child) {
   display: block;
   background-color: #fff;
   width: 24px;
-  height: 4px;
+  height: 2px;
   position: absolute;
   left: 11px;
   border-radius: 3px;
@@ -84,35 +102,50 @@ header .main-image {
   -moz-transition: all 0.4s;
 }
 
+#menu-btn p {
+  position: absolute;
+  top: 30px;
+
+  color: #fff;
+}
+
 #menu-btn span:first-child {
   top: 10px;
 }
 
 #menu-btn span:nth-child(2) {
-  margin-top: -2.1px;
-  top: 50%;
+  top: 17px;
+}
+
+#menu-btn span:nth-child(3) {
+  top: 24px;
 }
 
 #menu-btn span:last-child {
-  bottom: 10px;
+  position: absolute;
+  bottom: 2px;
+  left: 5.5px;
+  font-size: 12px;
+  color:#fff;
+
 }
 
 #menu-btn.active span:first-child {
-  -webkit-transform: translateY(10.5px) rotate(45deg);
-  -moz-transform: translateY(10.5px) rotate(45deg);
-  -ms-transform: translateY(10.5px) rotate(45deg);
-  transform: translateY(10.5px) rotate(45deg);
+  -webkit-transform: translateY(7px) rotate(45deg);
+  -moz-transform: translateY(7px) rotate(45deg);
+  -ms-transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 #menu-btn.active span:nth-child(2) {
   opacity: 0;
 }
 
-#menu-btn.active span:last-child {
-  -webkit-transform: translateY(-10.5px) rotate(-45deg);
-  -moz-transform: translateY(-10.5px) rotate(-45deg);
-  -ms-transform: translateY(-10.5px) rotate(-45deg);
-  transform: translateY(-10.5px) rotate(-45deg);
+#menu-btn.active span:nth-child(3) {
+  -webkit-transform: translateY(-7px) rotate(-45deg);
+  -moz-transform: translateY(-7px) rotate(-45deg);
+  -ms-transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /*ヘッダー：ハンバーガーメニュー*/
@@ -129,6 +162,7 @@ nav ul li a:before {
   font-family: "Font Awesome 5 Free";
   content: '\f0a4';
   margin-right: 3px;
+  color: var(--main-color);
 }
 
 #hbg-menu {
@@ -160,17 +194,48 @@ nav ul li a:before {
 }
 
 .hbg-inner ul {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .hbg-inner li a {
   display: block;
   font-size: 25px;
-  padding-top: 7px;
-  padding-bottom: 5px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   border-top: dotted 2px gray;
 }
 
 .hbg-inner li:last-child a {
   border-bottom: dotted 2px gray;
+}
+
+/*ページトップボタン*/
+#page-top {
+  display: none;
+  content: '';
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  box-shadow: var(--main-shadow);
+}
+
+#page-top span p{
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  font-size: 14px;
+  color: #fff;
+}
+
+
+
+/*フッター*/
+footer p {
+  text-align: right;
+  margin-right: 10px;
 }
