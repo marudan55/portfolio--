@@ -3,11 +3,11 @@ $(function(){
   $('#menu-btn').click(function(){
     $(this).toggleClass('active');
     if($('#menu-btn').hasClass('active')) {
-      $('#hbg-menu').addClass('active');
+      $('#hbg-menu,#overlay').addClass('active');
       $('#page-top').slideUp('fast');
       $('html,body').css('overflow','hidden');
     } else {
-      $('#hbg-menu').removeClass('active');
+      $('#hbg-menu,#overlay').removeClass('active');
       $('html,body').removeAttr('style');
     }
     return false;
@@ -16,7 +16,7 @@ $(function(){
 
 $(function(){
   $('#hbg-menu li a').click(function(){
-    $('#hbg-menu').removeClass('active');
+    $('#hbg-menu,#overlay').removeClass('active');
     $('#menu-btn').removeClass('active');
     $('html,body').removeAttr('style');
   });
