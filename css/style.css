@@ -25,7 +25,7 @@ h2 {
   padding-left: 10px;
   padding-bottom: 5px;
   padding-top: 80px;
-
+  margin-bottom: 30px;
 }
 
 .container {
@@ -35,9 +35,7 @@ h2 {
 
 
 /*ヘッダー*/
-header .title {
 
-}
 
 header h1 a {
   color: black;
@@ -89,11 +87,11 @@ header .top-image img {
   box-shadow: var(--main-shadow);
 }
 
-/*ヘッダー：メニューボタン*/
+/* メニューボタン */
 #menu-btn {
   display: block;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   top: 22px;
   right: 24px;
@@ -104,24 +102,17 @@ header .top-image img {
 }
 
 
-#menu-btn span:not(:last-child) {
+#menu-btn span.bar {
   display: block;
   background-color: #fff;
   width: 24px;
   height: 2px;
   position: absolute;
-  left: 11px;
+  left: 13px;
   border-radius: 3px;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-#menu-btn p {
-  position: absolute;
-  top: 30px;
-
-  color: #fff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
 }
 
 #menu-btn span:first-child {
@@ -136,13 +127,30 @@ header .top-image img {
   top: 24px;
 }
 
-#menu-btn span:last-child {
+#menu-btn span:nth-child(4) {
+  display: block;
   position: absolute;
-  bottom: 2px;
-  left: 5.5px;
+  bottom: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 12px;
   color:#fff;
+}
 
+#menu-btn span:nth-child(5) {
+  display: none;
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 12px;
+  color:#fff;
 }
 
 #menu-btn.active span:first-child {
@@ -163,38 +171,80 @@ header .top-image img {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/*ヘッダー：ハンバーガーメニュー*/
-
-nav h2 {
-  border: none;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav li a {
-  text-decoration: none;
-  color: black;
-}
-
-nav ul li a:before {
-  font-family: "Font Awesome 5 Free";
-  content: '\f0a4';
-  margin-right: 3px;
-  color: var(--main-color);
-}
-
-#hbg-menu {
+#menu-btn.active span:nth-child(4) {
   display: none;
+}
+
+#menu-btn.active span:nth-child(5) {
+  display: block;
+}
+
+
+/* 電話ボタン */
+#phone a {
+  display: block;
   position: fixed;
+  top: 22px;
+  right: 85px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  box-shadow: var(--main-shadow);
+  z-index: 100;
+}
+
+#phone i {
+  color: #fff;
+  font-size: 17px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#phone p {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+
+/* ハンバーガーメニュー */
+#hbg-menu {
+  position: fixed;
+  width: 350px;
+  height: 100%;
   top: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
   background-color: #fff;
   z-index: 5;
+  -webkit-transform: translateX(350px);
+  -moz-transform: translateX(350px);
+  -ms-transform: translateX(350px);
+  transform: translateX(350px);
+  transition: all 0.5s;
 }
+
+#hbg-menu.active {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
 
 #hbg-menu h2,ul {
   margin: 0;
@@ -205,7 +255,7 @@ nav ul li a:before {
   display: block;
   width: 80%;
   position: absolute;
-  top: 30%;
+  top: 45%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
   -moz-transform: translate(-50%,-50%);
@@ -215,11 +265,14 @@ nav ul li a:before {
 
 .hbg-inner ul {
   margin-top: 30px;
+  list-style: none;
 }
 
 .hbg-inner li a {
   display: block;
   font-size: 25px;
+  text-decoration: none;
+  color: black;
   padding-top: 12px;
   padding-bottom: 10px;
   border-top: dotted 2px gray;
@@ -227,6 +280,13 @@ nav ul li a:before {
 
 .hbg-inner li:last-child a {
   border-bottom: dotted 2px gray;
+}
+
+.hbg-inner ul li a:before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f0a4';
+  margin-right: 3px;
+  color: var(--main-color);
 }
 
 /* メインコンテンツ　*/
@@ -249,7 +309,7 @@ nav ul li a:before {
   height: 150px;
   border-radius: 50%;
   background-color: var(--pickup-color);
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   top: 140px;
   right: 30px;
@@ -262,7 +322,7 @@ nav ul li a:before {
   height: 100px;
   border-radius: 50%;
   background-color: var(--main-color);
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   top: 230px;
   right: 210px;
@@ -275,7 +335,7 @@ nav ul li a:before {
   height: 50px;
   border-radius: 50%;
   background-color: var(--pickup-color);
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   top: 160px;
   left: 30px;
@@ -347,7 +407,56 @@ nav ul li a:before {
 
 /*　診療内容　*/
 
+/* アコーディオンパネル */
+#panel {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+#panel dt {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+#panel dt.selected {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+#panel dt:after {
+  font-family: "Font Awesome 5 Free";
+	content: '\f0ab';
+  margin-left: 5px;
+}
+
+#panel dd {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  border-top: none;
+}
+
+#panel p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 5px;
+}
 /*　診療時間・料金表　*/
 #money table{
   border-collapse: collapse;
@@ -410,8 +519,6 @@ nav ul li a:before {
   color: var(--main-color);
 }
 
-
-
 #money .phone-call {
   width: 300px;
   height: 90px;
@@ -446,19 +553,23 @@ nav ul li a:before {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   background-color: var(--main-color);
   border-radius: 10px;
   box-shadow: var(--main-shadow);
   z-index: 100;
 }
 
-#page-top span p{
+#page-top p{
   display: block;
+  margin: 0;
+  padding: 0;
   position: absolute;
-  top: -3px;
-  left: -3px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
   font-size: 14px;
   color: #fff;
 }

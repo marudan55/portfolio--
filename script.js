@@ -2,10 +2,13 @@
 $(function(){
   $('#menu-btn').click(function(){
     $(this).toggleClass('active');
-    if($('#menu-btn').attr('class') == 'active') {
-      $('#hbg-menu').slideDown('slow');
+    if($('#menu-btn').hasClass('active')) {
+      $('#hbg-menu').addClass('active');
+      $('#page-top').slideUp('fast');
+      $('html,body').css('overflow','hidden');
     } else {
-      $('#hbg-menu').slideUp('slow');
+      $('#hbg-menu').removeClass('active');
+      $('html,body').removeAttr('style');
     }
     return false;
   });
@@ -13,8 +16,9 @@ $(function(){
 
 $(function(){
   $('#hbg-menu li a').click(function(){
-    $('#hbg-menu').slideUp('fast');
+    $('#hbg-menu').removeClass('active');
     $('#menu-btn').removeClass('active');
+    $('html,body').removeAttr('style');
   });
 });
 
@@ -31,4 +35,16 @@ $(function(){
   $('#page-top').click(function(){
     $('html,body').animate({scrollTop: 0} ,'slow');
   });
+});
+
+//アコーディオンパネル
+$(function(){
+  $('#panel dd:not(:first-of-type)').hide();
+  $('#panel dt').click(function(){
+    $('#panel dd').slideUp('slow');
+    $(this).next().slideDown('slow');
+    $('#panel dt').removeClass('selected');
+    $(this).addClass('selected');
+  });
+
 });

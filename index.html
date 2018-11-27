@@ -14,40 +14,47 @@
 
     <header>
       <div id="title">
-        <h1><a href="#top">マルダン歯科</a></h1>
-        <div class="phone-call">
+        <h1><a>マルダン歯科</a></h1>
+        <!-- <div class="phone-call">
           <p>ご予約・お問い合わせはこちら<br>
           <span class="call">0422-34-7130</span><br>
         <span class="day">休診日：日曜、祝祭日</span></p>
-        </div>
+        </div> -->
       </div>
 
       <div class="top-image">
         <img src="./image/alex-581032-unsplash-mini.jpg" alt="TOP画像">
       </div>
 
+    <!-- 電話ボタン -->
+    <div id="phone">
+      <a href="tel:0422-34-7130">
+        <i class="fas fa-phone"></i>
+        <p>call</p>
+      </a>
+    </div>
+
     <!--メニューボタン-->
     <div id="menu">
             <a id="menu-btn" href="#">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
             <span>menu</span>
-
+            <span>close</span>
           </a>
     </div>
 
 
-    <!--ナビゲーション-->
+    <!-- ハンバーガーメニュー -->
       <nav>
         <div id="hbg-menu">
           <div class="hbg-inner">
-            <h2>マルダン歯科</h2>
             <ul>
               <li><a href="#clinic">医院紹介</a></li>
               <li><a href="#staff">ドクター紹介</a></li>
               <li><a href="#dia">診療内容</a></li>
-              <li><a href="#money">診療時間</a></li>
+              <li><a href="#money">診療日程</a></li>
               <li><a href="#access">アクセス</a></li>
             </ul>
           </div>
@@ -105,33 +112,37 @@
       <!-- 診療内容 -->
       <div id="dia">
         <h2>診療内容</h2>
-        <ul>
-          <li>定期健診</li>
-          <li>一般歯科</li>
-          <li>小児歯科</li>
-          <li>矯正歯科</li>
-          <li>審美歯科</li>
-          <li>抜歯</li>
-        </ul>
-      </div>
+          <dl id="panel">
+            <dt class="selected">一般歯科</dt>
+            <dd><p>練習用テキスト練習用テキスト練習用テキスト練習用テキスト</p></dd>
+            <dt>小児歯科</dt>
+            <dd><p>練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト</p></dd>
+            <dt>審美歯科</dt>
+            <dd><p>練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト</p></dd>
+            <dt>ホワイトニング</dt>
+            <dd><p>練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト練習用テキスト</p></dd>
+            <dt>抜歯</dt>
+            <dd><p>練習用テキスト練習用テキスト練習用テキスト練習用テキスト</p></dd>
+          </dl>
+        </div>
 
 
       <!-- 診療時間・料金表 -->
       <div id="money">
-        <h2>診療時間</h2>
+        <h2>診療日程</h2>
         <table>
           <tr>
             <th>診療日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th>
           </tr>
         <tr>
-          <td>午前(9:30 ~ 13:30)</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>✕</td>
+          <td>午前(9:30 ~ 13:30)</td><td>〇</td><td>〇</td><td>〇</td><td>✕</td><td>〇</td><td>〇</td><td>✕</td>
         </tr>
         <tr>
-          <td>午後(15:00 ~ 19:00)</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>✕</td>
+          <td>午後(15:00 ~ 19:00)</td><td>〇</td><td>〇</td><td>〇</td><td>✕</td><td>〇</td><td>〇</td><td>✕</td>
         </tr>
       </table>
       <ul>
-        <li>休診日：毎週日曜、祝祭日</li>
+        <li>休診日：毎週木曜、毎週日曜、祝祭日</li>
         <li>ご予約をキャンセルされる場合や予約時刻に間に合わない場合は、なるべく早くご連絡くださいますようお願いいたします。</li>
       </ul>
         <div class="phone-call">
@@ -160,8 +171,7 @@
 
     <!--ページトップボタン-->
     <div id="page-top">
-      <span><p>↑TOP</p>
-      </span>
+      <p>↑TOP</p>
     </div>
 </div><!--container-->
 </div><!--/wrap-->
