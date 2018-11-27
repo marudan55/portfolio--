@@ -23,7 +23,7 @@ h2 {
   padding-left: 10px;
   padding-bottom: 5px;
   padding-top: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .container {
@@ -209,16 +209,16 @@ header .top-image img {
 /* ハンバーガーメニュー */
 #hbg-menu {
   position: fixed;
-  width: 350px;
+  width: 300px;
   height: 100%;
   top: 0;
   right: 0;
   background-color: #fff;
   z-index: 5;
-  -webkit-transform: translateX(350px);
-  -moz-transform: translateX(350px);
-  -ms-transform: translateX(350px);
-  transform: translateX(350px);
+  -webkit-transform: translateX(300px);
+  -moz-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  transform: translateX(300px);
   transition: all 0.5s;
 }
 
@@ -238,7 +238,7 @@ header .top-image img {
   display: block;
   width: 80%;
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -415,19 +415,21 @@ header .top-image img {
   font-size: 18px;
   font-weight: bold;
   background-color: var(--main-color);
+  opacity: 0.8;
   color: #fff;
   margin: 0;
   padding: 0;
-  padding-top: 6px;
-  padding-bottom: 5px;
+  padding-top: 11px;
+  padding-bottom: 10px;
   border-radius: 10px 10px 0 0;
   box-sizing: border-box;
   border: 1px solid black;
 }
 
 #panel dt.selected {
-  background-color: var(--accent-color);
+  background-color: var(--main-color);
   color: #fff;
+  opacity: 1;
 }
 
 #panel dt:after {
@@ -453,7 +455,7 @@ header .top-image img {
   padding: 5px;
 }
 
-/*　診療時間・料金表　*/
+/*　診療日程　*/
 #money table {
   border-collapse: collapse;
   width: 100%;
@@ -577,6 +579,8 @@ footer {
 }
 
 footer p {
+  margin: 0;
+  padding: 0;
   text-align: center;
   color: #fff;
 }
