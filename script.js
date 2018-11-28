@@ -26,7 +26,7 @@ $(function(){
 $(function(){
   $(window).scroll(function(){
     var now = $(this).scrollTop();
-    if(now > 50) {
+    if(now > 300) {
       $('#page-top').slideDown('slow');
     } else {
       $('#page-top').slideUp('slow');

@@ -1,0 +1,132 @@
+/* ブレークポイント（タブレットサイズ） */
+@media screen and (min-width:600px) and (max-width: 960px) {
+
+
+/* タイトル */
+#title {
+  position: relative;
+  height: 140px;
+}
+
+#title .phone-call {
+  position: absolute;
+  top: 0px;
+  right: 120px;
+}
+
+/* 電話ボタン */
+#phone {
+  display: none;
+}
+
+/* ナビゲーション */
+#menu-big {
+  display: none;
+}
+
+
+}/* ブレークポイント（タブレットサイズ）閉じ */
+
+/* ブレークポイント（パソコン小画面サイズ） */
+@media screen and (min-width:960px) and (max-width: 1280px) {
+  /* タイトル */
+  #title {
+    position: relative;
+    height: 140px;
+  }
+
+  #title .phone-call {
+    position: absolute;
+    top: 0px;
+    right: 120px;
+  }
+
+  /* 電話ボタン */
+  #phone {
+    display: none;
+  }
+
+  /* メニューボタン */
+  #menu {
+    display: none;
+  }
+
+}/* ブレークポイント（パソコン小画面サイズ）閉じ */
+
+/* ブレークポイント（パソコン大画面サイズ） */
+@media screen and (min-width:1280px) {
+  /* 初期設定 */
+  h2 {
+    margin-top: 200px;
+  }
+
+  /* タイトル */
+  #title {
+    position: relative;
+    height: 140px;
+  }
+
+  #title .phone-call {
+    position: absolute;
+    top: 0px;
+    right: 120px;
+  }
+
+  /* 電話ボタン */
+  #phone {
+    display: none;
+  }
+
+  /* ナビゲーション */
+  #menu {
+    display: none;
+  }
+
+  #menu-big {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu-big ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  #menu-big li {
+    border-right: 2px dotted gray;
+    transform: skewX(-20deg);
+  }
+
+  #menu-big li:first-of-type {
+    border-left: 2px dotted gray;
+    transform: skewX(-20deg);
+  }
+
+  #menu-big li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+    transform: skewX(20deg);
+  }
+
+  /* アクセス */
+  #access .flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  .access-info {
+    margin-right: 20px;
+  }
+  #access iframe {
+    width: 600px;
+    height: 400px;
+  }
+
+}/* ブレークポイント（パソコン大画面サイズ）閉じ */

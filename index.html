@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="description" content="">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/break.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <title>マルダン歯科</title>
 </head>
@@ -16,17 +17,18 @@
 
     <header>
       <div id="title">
-        <h1><a>マルダン歯科</a></h1>
-        <!-- <div class="phone-call">
-          <p>ご予約・お問い合わせはこちら<br>
-          <span class="call">0422-34-7130</span><br>
-        <span class="day">休診日：日曜、祝祭日</span></p>
-        </div> -->
+
+          <div class="phone-call">
+            <p>ご予約・お問い合わせはこちら<br>
+            <span class="call">0422-34-7130</span><br>
+          <span class="day">休診日：日曜、祝祭日</span></p>
+          </div>
       </div>
 
-      <div class="top-image">
-        <img src="./image/alex-581032-unsplash-mini.jpg" alt="TOP画像">
-      </div>
+
+
+
+
 
       <!-- 電話ボタン -->
       <div id="phone">
@@ -59,6 +61,7 @@
               <li><a href="#money">診療日程</a></li>
               <li><a href="#staff">ドクター紹介</a></li>
               <li><a href="#access">アクセス</a></li>
+              <li><p>マルダン歯科</p></li>
             </ul>
           </div>
         </div>
@@ -66,6 +69,24 @@
         <!-- メニューのオーバーレイ -->
         <div id="overlay"></div>
 
+        <!-- 大画面用メニュー -->
+        <div id="menu-big">
+          <ul>
+            <li><a href="#clinic">医院紹介</a></li>
+            <li><a href="#dia">診療内容</a></li>
+            <li><a href="#money">診療日程</a></li>
+            <li><a href="#staff">ドクター紹介</a></li>
+            <li><a href="#access">アクセス</a></li>
+          </ul>
+        </div>
+
+        <!-- トップ画像 -->
+        <div class="top-image">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./image/toothbrush-big.jpg" alt="トップ画像">
+              <img src="./image/toothbrush-small.jpg" alt="トップ画像">
+          </picture>
+        </div>
       </nav>
     </header>
 
@@ -167,7 +188,6 @@
           <div class="phone-call">
             <p class="pcenter">ご予約・お問い合わせはこちら<br>
               <span class="call">0422-34-7130</span><br>
-
           </div>
         </div>
 
@@ -251,13 +271,19 @@
         <!-- アクセス -->
         <div id="access">
           <h2>アクセス</h2>
-          <ul>
-            <li>〒131-0045　東京都墨田区押上1丁目1-2</li>
-            <li>TEL 0422-34-7130</li>
-            <li>駐車スペース６台分</li>
-          </ul>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6566075729625!2d139.8085063509966!3d35.71006703589994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1542961314720"
-            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="flex">
+            <div class="access-info">
+              <ul>
+                <li>〒131-0045　東京都墨田区押上1丁目1-2</li>
+                <li>TEL 0422-34-7130</li>
+                <li>駐車スペース６台分</li>
+              </ul>
+            </div>
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6566075729625!2d139.8085063509966!3d35.71006703589994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1542961314720"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
 
 
