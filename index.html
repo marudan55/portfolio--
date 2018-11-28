@@ -125,38 +125,41 @@
         <!-- 診療時間・料金表 -->
         <div id="money">
           <h2>診療日程</h2>
-          <table>
-            <tr>
-              <th>診療日</th>
-              <th>月</th>
-              <th>火</th>
-              <th>水</th>
-              <th>木</th>
-              <th>金</th>
-              <th>土</th>
-              <th>日</th>
-            </tr>
-            <tr>
-              <td>午前(9:30 ~ 13:30)</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>✕</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>✕</td>
-            </tr>
-            <tr>
-              <td>午後(15:00 ~ 19:00)</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>✕</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>✕</td>
-            </tr>
-          </table>
+          <div class="calendar">
+            <table>
+              <tr>
+                <th>診療日</th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+                <th>日</th>
+              </tr>
+              <tr>
+                <td>午前(9:30 ~ 13:30)</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td class="no">✕</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td class="no">✕</td>
+              </tr>
+              <tr>
+                <td>午後(15:00 ~ 19:00)</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td class="no">✕</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td class="no">✕</td>
+              </tr>
+            </table>
+          </div>
+
           <ul>
             <li>休診日：毎週木曜、毎週日曜、祝祭日</li>
             <li>ご予約をキャンセルされる場合や予約時刻に間に合わない場合は、なるべく早くご連絡くださいますようお願いいたします。</li>
@@ -273,7 +276,8 @@
   </div>
   <!--/wrap-->
   <footer>
-
+    <h3>マルダン歯科</h3>
+    <p>TEL:0422-34-7130</p>
     <p>©2018 マルダン歯科</p>
   </footer>
 

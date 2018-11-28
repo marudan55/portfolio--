@@ -336,7 +336,7 @@ header .top-image img {
   opacity: 0.3;
   position: absolute;
   top: 160px;
-  left: 30px;
+  right: 330px;
   z-index: 1;
 }
 
@@ -487,8 +487,9 @@ header .top-image img {
 #money table {
   border-collapse: collapse;
   width: 100%;
-  text-align: left;
+  text-align: center;
   margin-top: 30px;
+  max-width: 500px;
 }
 
 #money table th, #money table td {
@@ -507,6 +508,12 @@ header .top-image img {
 
 #money table th:last-child {
   border-radius: 0 10px 0 0;
+}
+
+#money table .no {
+  background-color: var(--main-color);
+  opacity: 0.9;
+  color: #fff;
 }
 
 #money ul {
@@ -604,6 +611,14 @@ footer {
   background-color: var(--pickup-color);
   margin: 0;
   padding: 0;
+}
+
+footer h3 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
 }
 
 footer p {
