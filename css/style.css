@@ -79,7 +79,7 @@ header .top-image img {
   display: block;
   position: fixed;
   top: 22px;
-  right: 85px;
+  right: 90px;
   display: block;
   width: 50px;
   height: 50px;
@@ -370,20 +370,22 @@ header .top-image img {
   margin-top: 10px;
 }
 
-#staff p {
+#staff p.ruby {
   color: gray;
   margin: 0;
   padding: 0;
 }
 
-#staff h3 {
-  display: block;
-  text-align: left;
-  font-size: 25px;
-  border-left: 10px solid var(--main-color);
-  margin-top: 30px;
-  margin-left: 10px;
-  padding-left: 5px;
+.career p {
+  width: 55px;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
 }
 
 #staff ul {
@@ -391,10 +393,26 @@ header .top-image img {
   list-style: none;
 }
 
-#staff table {
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.career table {
+  display: none;
   text-align: left;
-  font-size: 15px;
+  font-size: 16px;
   padding-left: 10px;
+}
+
+.career table.active {
+  display: block;
+  animation: show 0.5s linear;
 }
 
 #staff table th {
@@ -407,6 +425,16 @@ header .top-image img {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+#panel img {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+
 }
 
 #panel dt {

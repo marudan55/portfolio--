@@ -46,5 +46,12 @@ $(function(){
     $('#panel dt').removeClass('selected');
     $(this).addClass('selected');
   });
+});
 
+
+//経歴ボタン
+$(function(){
+  $('.career p').click(function(){
+    $('.career table').toggleClass('active');
+  });
 });
