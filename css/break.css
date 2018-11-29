@@ -98,6 +98,12 @@
     transform: skewX(20deg);
   }
 
+  /*　アクセス：マップ　*/
+  #access iframe {
+    width: 650px;
+    height: 400px;
+  }
+
 }/* ブレークポイント（パソコン小画面サイズ）閉じ */
 
 /* ブレークポイント（パソコン大画面サイズ） */
@@ -163,10 +169,7 @@
   }
 
   /* アクセス */
-  #access .flex {
-    display: flex;
-    justify-content: center;
-  }
+
 
   .access-info {
     margin-right: 20px;
