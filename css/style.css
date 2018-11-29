@@ -423,7 +423,7 @@ header p span.day {
   border-right: 3px solid #fff;
   border-bottom: 3px solid #fff;
   transform: rotate(45deg);
-
+  transition: all 0.5s;
 }
 
 .career p.active:after {
