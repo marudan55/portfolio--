@@ -416,7 +416,7 @@ header p span.day {
 .career p:after {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 10.5px;
   right: 20px;
   width: 8px;
   height: 8px;
@@ -429,7 +429,7 @@ header p span.day {
 .career p.active:after {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 14.5px;
   right: 20px;
   width: 8px;
   height: 8px;
