@@ -5,13 +5,13 @@
 /* タイトル */
 #title {
   position: relative;
-  height: 140px;
+  height: 170px;
 }
 
 #title .phone-call {
   display: block;
   position: absolute;
-  top: 0px;
+  top: 24px;
   right: 120px;
 }
 
@@ -45,13 +45,14 @@
   /* タイトル */
   #title {
     position: relative;
-    height: 140px;
+    height: 170px;
   }
 
   #title .phone-call {
+    display: block;
     position: absolute;
-    top: 0px;
-    right: 120px;
+    top: 20px;
+    right: 130px;
   }
 
   /* 電話ボタン */
@@ -101,7 +102,7 @@
   /*　アクセス：マップ　*/
   #access iframe {
     width: 650px;
-    height: 400px;
+    height: 450px;
   }
 
 }/* ブレークポイント（パソコン小画面サイズ）閉じ */
@@ -120,6 +121,7 @@
   }
 
   #title .phone-call {
+    display: block;
     position: absolute;
     top: 0px;
     right: 120px;
