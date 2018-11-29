@@ -396,11 +396,14 @@ header p span.day {
 }
 
 .career p {
+  display: block;
   width: 80px;
+  height: 40px;
+  line-height: 40px;
   margin: 0;
   padding: 0;
   margin: 20px auto;
-  padding: 10px 20px 10px 5px;
+  padding-right: 20px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -413,19 +416,20 @@ header p span.day {
 .career p:after {
   content: "";
   position: absolute;
-  top: 16px;
+  top: 11px;
   right: 20px;
   width: 8px;
   height: 8px;
   border-right: 3px solid #fff;
   border-bottom: 3px solid #fff;
   transform: rotate(45deg);
+
 }
 
 .career p.active:after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 20px;
   width: 8px;
   height: 8px;
