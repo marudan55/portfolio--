@@ -9,6 +9,7 @@
 }
 
 #title .phone-call {
+  display: block;
   position: absolute;
   top: 0px;
   right: 120px;
@@ -24,6 +25,18 @@
   display: none;
 }
 
+/* ハンバーガーメニュー */
+#hbg-menu {
+  width: 400px;
+  -webkit-transform: translateX(400px);
+  transform: translateX(400px);
+}
+
+/*　アクセス：マップ　*/
+#access iframe {
+  width: 650px;
+  height: 500px;
+}
 
 }/* ブレークポイント（タブレットサイズ）閉じ */
 
@@ -49,6 +62,40 @@
   /* メニューボタン */
   #menu {
     display: none;
+  }
+
+  /*　ハンバーガーメニュー　*/
+  #menu-big {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu-big ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  #menu-big li {
+    border-right: 2px dotted gray;
+    transform: skewX(-20deg);
+  }
+
+  #menu-big li:first-of-type {
+    border-left: 2px dotted gray;
+    transform: skewX(-20deg);
+  }
+
+  #menu-big li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+    transform: skewX(20deg);
   }
 
 }/* ブレークポイント（パソコン小画面サイズ）閉じ */

@@ -52,6 +52,11 @@ $(function(){
 //経歴ボタン
 $(function(){
   $('.career p').click(function(){
-    $('.career table').toggleClass('active');
+    $(this).toggleClass('active');
+    if($('.career p').hasClass('active')) {
+      $('.career table').fadeIn('slow');
+    } else {
+      $('.career table').fadeOut('slow');
+    }
   });
 });
