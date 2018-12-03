@@ -1,5 +1,3 @@
-
-
 /*変数宣言*/
 :root {
   --main-color: #F06292;
@@ -10,6 +8,11 @@
 }
 
 /*初期設定*/
+
+body {
+font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -34,37 +37,58 @@ h2 {
 }
 
 /*ヘッダー*/
+/*　タイトルロゴ　*/
+#title {
+  height: 180px;
+  position: relative;
+}
 
+.title-logo img {
+  width: 230px;
+  height: auto;
+  position: absolute;
+  top: 24px;
+  left: 10px;
+}
 
-
-
-header p span.call {
+/*　タイトル：電話ボタン　*/
+#title p span.call {
   color: var(--main-color);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 
-header p span.call:before {
+#title p span.call:before {
   font-family: "Font Awesome 5 Free";
   content: '\f095';
   margin-right: 3px;
   color: var(--main-color);
 }
 
-header p span.day {
-  font-size: 14px;
+#title p span.small {
+  font-size: 12px;
+  color: black;
 }
 
- #title .phone-call {
-   display: none;
-  text-align: center;
-  width: 300px;
-  height: 110px;
-  border: 3px solid var(--main-color);
-  border-radius: 10px;
-  margin: 0;
+#title p {
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+}
+
+#title a.phone-call {
+  width: 280px;
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  top: 95px;
+  right: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  text-align: center;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
 }
 
 /*トップ画像*/
@@ -83,7 +107,7 @@ header p span.day {
 }
 
 /* 電話ボタン */
-#phone a {
+/* #phone a {
   display: block;
   position: fixed;
   top: 22px;
@@ -121,7 +145,7 @@ header p span.day {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-}
+} */
 
 /* メニューボタン */
 #menu-btn {
@@ -129,7 +153,7 @@ header p span.day {
   width: 50px;
   height: 50px;
   position: fixed;
-  top: 22px;
+  top: 24px;
   right: 24px;
   z-index: 100;
   background-color: var(--main-color);
@@ -214,7 +238,6 @@ header p span.day {
   display: block;
 }
 
-
 /* ハンバーガーメニュー */
 #hbg-menu {
   position: fixed;
@@ -243,7 +266,7 @@ header p span.day {
   display: block;
   width: 80%;
   position: absolute;
-  top: 60px;
+  top: 65px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -256,7 +279,7 @@ header p span.day {
 
 .hbg-inner li a {
   display: block;
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   color: black;
   padding-top: 12px;
@@ -274,6 +297,14 @@ header p span.day {
   margin-right: 3px;
   color: var(--main-color);
 }
+
+.hbg-inner li img {
+  width: 200px;
+  height: auto;
+  margin-top: 50px;
+}
+
+/*ハンバーガーメニュー：オーバーレイ*/
 #overlay {
   display: none;
 }
@@ -293,7 +324,6 @@ header p span.day {
 #menu-big {
   display: none;
 }
-
 
 /* メインコンテンツ　*/
 /*　医院紹介　*/
@@ -350,9 +380,176 @@ header p span.day {
   z-index: 1;
 }
 
+/*　診療内容　*/
+/* 診療内容：アコーディオンパネル */
+#panel {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+#panel img {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+#panel dt {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--main-color);
+  opacity: 0.8;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+#panel dt.selected {
+  background-color: var(--main-color);
+  color: #fff;
+  opacity: 1;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+#panel dt:after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f0ab';
+  margin-left: 5px;
+}
+
+#panel dd {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+#panel p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 5px;
+}
+
+/*　診療日程　*/
+/*　診療日程：日程表　*/
+#money .money-in {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#money table {
+  border-collapse: separate;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  border: 2px solid var(--pickup-color);
+  border-radius: 13px;
+  border-spacing: 0;
+}
+
+#money table th, #money table td {
+  border-bottom: 1px dotted black;
+  padding: 5px;
+}
+
+#money table tr.border-none td {
+  border-bottom: none;
+}
+
+#money table th {
+  font-weight: normal;
+  background-color: var(--pickup-color);
+}
+
+#money table th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+#money table th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+#money table td.under-left {
+  border-radius: 0 0 0 10px;
+}
+
+#money table td.under-right {
+  border-radius: 0 0 10px 0;
+}
+
+#money table .no {
+  background-color: var(--main-color);
+  opacity: 0.9;
+  color: #fff;
+}
+
+/*　診療日程：備考リスト　*/
+#money ul {
+  list-style: circle;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+#money ul li {
+  line-height: 1.7;
+}
+
+/*　診療日程：電話番号　*/
+#money p span.call {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#money p span.call:before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f095';
+  margin-right: 3px;
+  color: var(--main-color);
+}
+
+#money p span.small {
+  font-size: 12px;
+  color: black;
+}
+
+#money p {
+  padding: 0;
+  margin: 0;
+}
+
+#money a.phone-call {
+  width: 280px;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
 /*　ドクター紹介　*/
-
-
 .staff-in {
   display: block;
   margin: 0 auto;
@@ -440,9 +637,6 @@ header p span.day {
   list-style: none;
 }
 
-
-
-
 .career table {
   display: none;
   text-align: left;
@@ -456,179 +650,6 @@ header p span.day {
 
 #staff table th {
   padding-top: 15px;
-}
-
-/*　診療内容　*/
-
-/* 診療内容：アコーディオンパネル */
-#panel {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-#panel img {
-  display: block;
-  margin: 0 auto;
-  padding: 20px 0;
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-
-}
-
-#panel dt {
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: var(--main-color);
-  opacity: 0.8;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  padding-top: 11px;
-  padding-bottom: 10px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  border: 1px solid black;
-}
-
-#panel dt.selected {
-  background-color: var(--main-color);
-  color: #fff;
-  opacity: 1;
-  border-radius: 10px 10px 0 0;
-}
-
-#panel dt:after {
-  font-family: "Font Awesome 5 Free";
-  content: '\f0ab';
-  margin-left: 5px;
-}
-
-#panel dd {
-  display: block;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 1px solid black;
-  border-top: none;
-  border-radius: 0 0 10px 10px;
-}
-
-#panel p {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.7;
-  padding: 5px;
-}
-
-
-/*　診療日程　*/
-
-/*　診療日程：日程表　*/
-
-#money .money-in {
-  max-width: 650px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-#money table {
-  border-collapse: separate;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-    border: 2px solid var(--pickup-color);
-  border-radius: 13px;
-  border-spacing: 0;
-}
-
-#money table th, #money table td {
-  border-bottom: 1px dotted black;
-  padding: 5px;
-}
-
-#money table tr.border-none td {
-  border-bottom: none;
-}
-
-
-#money table th {
-  font-weight: normal;
-  background-color: var(--pickup-color);
-}
-
-#money table th:first-child {
-  border-radius: 10px 0 0 0;
-}
-
-#money table th:last-child {
-  border-radius: 0 10px 0 0;
-}
-
-#money table td.under-left {
-  border-radius: 0 0 0 10px;
-}
-
-#money table td.under-right {
-  border-radius: 0 0 10px 0;
-}
-
-#money table .no {
-  background-color: var(--main-color);
-  opacity: 0.9;
-  color: #fff;
-}
-
-/*　診療日程：備考リスト　*/
-#money ul {
-  list-style: circle;
-  padding-left: 20px;
-  margin: 20px 0;
-}
-
-#money ul li {
-  line-height: 1.7;
-}
-
-/*　診療日程：電話番号　*/
-#money .phone-call {
-  text-align: center;
-}
-
-#money p.pcenter {
-  display: block;
-  width: 280px;
-  padding-top: 5px;
-  margin: 10px auto;
-  border-radius: 10px;
-}
-
-#money p span.call {
-  color: var(--main-color);
-  font-size: 25px;
-  font-weight: bold;
-}
-
-#money p span.call:before {
-  font-family: "Font Awesome 5 Free";
-  content: '\f095';
-  margin-right: 3px;
-  color: var(--main-color);
-}
-
-#money .phone-call {
-  width: 300px;
-  height: 90px;
-  border: 3px solid var(--main-color);
-  border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 50px;
 }
 
 /*　アクセス　*/
@@ -691,6 +712,11 @@ footer {
   background-color: var(--pickup-color);
   margin: 0;
   padding: 0;
+}
+
+footer img {
+  width: 200px;
+  height: auto;
 }
 
 footer h3 {

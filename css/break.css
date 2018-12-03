@@ -1,58 +1,60 @@
 /* ブレークポイント（タブレットサイズ） */
 @media screen and (min-width:600px) and (max-width: 960px) {
 
-
-/* タイトル */
-#title {
-  position: relative;
-  height: 170px;
-}
-
-#title .phone-call {
-  display: block;
-  position: absolute;
-  top: 24px;
-  right: 120px;
-}
-
-/* 電話ボタン */
-#phone {
-  display: none;
-}
-
-/* ナビゲーション */
-#menu-big {
-  display: none;
-}
-
-/* ハンバーガーメニュー */
-#hbg-menu {
-  width: 400px;
-  -webkit-transform: translateX(400px);
-  transform: translateX(400px);
-}
-
-/*　アクセス：マップ　*/
-#access iframe {
-  width: 650px;
-  height: 500px;
-}
-
-}/* ブレークポイント（タブレットサイズ）閉じ */
-
-/* ブレークポイント（パソコン小画面サイズ） */
-@media screen and (min-width:960px) and (max-width: 1280px) {
   /* タイトル */
   #title {
     position: relative;
-    height: 170px;
+    height: 100px;
   }
 
-  #title .phone-call {
+  #title a.phone-call {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 130px;
+    top: 24px;
+    right: 120px;
+    transform: translateX(0%);
+  }
+
+  /* 電話ボタン */
+  #phone {
+    display: none;
+  }
+
+  /* ナビゲーション */
+  #menu-big {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  #hbg-menu {
+    width: 400px;
+    -webkit-transform: translateX(400px);
+    transform: translateX(400px);
+  }
+
+  /*　アクセス：マップ　*/
+  #access iframe {
+    width: 650px;
+    height: 500px;
+  }
+}
+
+/* ブレークポイント（タブレットサイズ）閉じ */
+/* ブレークポイント（パソコン小画面サイズ） */
+@media screen and (min-width:960px) and (max-width: 1280px) {
+
+  /* タイトル */
+  #title {
+    position: relative;
+    height: 150px;
+  }
+
+  #title a.phone-call {
+    display: block;
+    position: absolute;
+    transform: translateX(0%);
+    top: 24px;
+    right: 24px;
   }
 
   /* 電話ボタン */
@@ -104,11 +106,12 @@
     width: 650px;
     height: 450px;
   }
+}
 
-}/* ブレークポイント（パソコン小画面サイズ）閉じ */
-
+/* ブレークポイント（パソコン小画面サイズ）閉じ */
 /* ブレークポイント（パソコン大画面サイズ） */
 @media screen and (min-width:1280px) {
+
   /* 初期設定 */
   h2 {
     margin-top: 200px;
@@ -117,14 +120,15 @@
   /* タイトル */
   #title {
     position: relative;
-    height: 140px;
+    height: 24px;
   }
 
-  #title .phone-call {
+  #title a.phone-call {
     display: block;
     position: absolute;
-    top: 0px;
-    right: 120px;
+    top: 24px;
+    right: 24px;
+    transform: translateX(0%);
   }
 
   /* 電話ボタン */
@@ -171,14 +175,14 @@
   }
 
   /* アクセス */
-
-
   .access-info {
     margin-right: 20px;
   }
+
   #access iframe {
     width: 600px;
     height: 400px;
   }
+}
 
-}/* ブレークポイント（パソコン大画面サイズ）閉じ */
+/* ブレークポイント（パソコン大画面サイズ）閉じ */
