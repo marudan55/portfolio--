@@ -544,6 +544,8 @@ h2 {
   text-decoration: none;
   display: block;
   margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   border: 2px solid var(--main-color);
   border-radius: 10px;
@@ -715,21 +717,56 @@ footer {
 }
 
 footer img {
+  display: block;
+  margin: 0 auto;
   width: 200px;
   height: auto;
+  padding-top: 50px;
 }
 
-footer h3 {
+/*　診療日程：電話番号　*/
+footer p span.call {
   color: #fff;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  padding-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer p span.call:before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f095';
+  margin-right: 3px;
+  color: #fff;
+}
+
+footer p span.small {
+  font-size: 12px;
+  color: #fff;
 }
 
 footer p {
+  padding: 0;
+  margin: 0;
+}
+
+footer a.phone-call {
+  width: 280px;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+
+
+footer p.cl {
   margin: 0;
   padding: 0;
+  margin-top: 20px;
   text-align: center;
   color: #fff;
 }
