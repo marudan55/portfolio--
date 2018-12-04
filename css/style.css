@@ -48,13 +48,13 @@ h2 {
   height: auto;
   position: absolute;
   top: 24px;
-  left: 10px;
+  left: 24px;
 }
 
 /*　タイトル：電話ボタン　*/
 #title p span.call {
   color: var(--main-color);
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
 }
 
@@ -66,7 +66,7 @@ h2 {
 }
 
 #title p span.small {
-  font-size: 12px;
+  font-size: 13px;
   color: black;
 }
 
@@ -76,7 +76,7 @@ h2 {
 }
 
 #title a.phone-call {
-  width: 280px;
+  width: 330px;
   text-decoration: none;
   display: block;
   position: absolute;
@@ -282,14 +282,17 @@ h2 {
   font-size: 20px;
   text-decoration: none;
   color: black;
-  padding-top: 12px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-top: dotted 2px gray;
 }
 
-.hbg-inner li:last-child a {
+.hbg-inner li:nth-child(5) a {
   border-bottom: dotted 2px gray;
+  margin-bottom: 60px;
 }
+
+
 
 .hbg-inner ul li a:before {
   font-family: "Font Awesome 5 Free";
@@ -301,7 +304,6 @@ h2 {
 .hbg-inner li img {
   width: 200px;
   height: auto;
-  margin-top: 50px;
 }
 
 /*ハンバーガーメニュー：オーバーレイ*/
@@ -518,7 +520,7 @@ h2 {
 /*　診療日程：電話番号　*/
 #money p span.call {
   color: var(--main-color);
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
 }
 
@@ -530,7 +532,7 @@ h2 {
 }
 
 #money p span.small {
-  font-size: 12px;
+  font-size: 13px;
   color: black;
 }
 
@@ -540,7 +542,7 @@ h2 {
 }
 
 #money a.phone-call {
-  width: 280px;
+  width: 330px;
   text-decoration: none;
   display: block;
   margin: 0 auto;
@@ -714,6 +716,8 @@ footer {
   background-color: var(--pickup-color);
   margin: 0;
   padding: 0;
+  margin-top: 80px;
+  padding-bottom: 20px;
 }
 
 footer img {
@@ -727,7 +731,7 @@ footer img {
 /*　診療日程：電話番号　*/
 footer p span.call {
   color: #fff;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
 }
 
@@ -739,7 +743,7 @@ footer p span.call:before {
 }
 
 footer p span.small {
-  font-size: 12px;
+  font-size: 13px;
   color: #fff;
 }
 
@@ -749,7 +753,7 @@ footer p {
 }
 
 footer a.phone-call {
-  width: 280px;
+  width: 330px;
   text-decoration: none;
   display: block;
   margin: 0 auto;

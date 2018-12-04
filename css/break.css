@@ -46,7 +46,7 @@
   /* タイトル */
   #title {
     position: relative;
-    height: 150px;
+    height: 120px;
   }
 
   #title a.phone-call {
@@ -106,9 +106,9 @@
     width: 650px;
     height: 450px;
   }
-}
+}/* ブレークポイント（パソコン小画面サイズ）閉じ */
 
-/* ブレークポイント（パソコン小画面サイズ）閉じ */
+
 /* ブレークポイント（パソコン大画面サイズ） */
 @media screen and (min-width:1280px) {
 
