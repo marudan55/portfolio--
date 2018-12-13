@@ -76,6 +76,7 @@
     padding: 0;
   }
 
+
   #menu-big ul {
     display: flex;
     list-style: none;
@@ -84,12 +85,12 @@
   }
 
   #menu-big li {
-    border-right: 2px dotted gray;
+    border-right: 3px dotted gray;
     transform: skewX(-20deg);
   }
 
   #menu-big li:first-of-type {
-    border-left: 2px dotted gray;
+    border-left: 3px dotted gray;
     transform: skewX(-20deg);
   }
 
@@ -157,12 +158,12 @@
   }
 
   #menu-big li {
-    border-right: 2px dotted gray;
+    border-right: 3px dotted gray;
     transform: skewX(-20deg);
   }
 
   #menu-big li:first-of-type {
-    border-left: 2px dotted gray;
+    border-left: 3px dotted gray;
     transform: skewX(-20deg);
   }
 
@@ -174,7 +175,12 @@
     font-weight: bold;
     color: var(--main-color);
     transform: skewX(20deg);
-  }
+    transition: all 0.5s;
+    }
+
+    #menu-big a:hover {
+      transform: rotate(-2deg);
+    }
 
   /* アクセス */
   .access-info {
